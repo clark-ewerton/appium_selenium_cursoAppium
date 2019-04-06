@@ -3,23 +3,23 @@ Projeto para automação de um aplicativo Android o curso da udemy utilizando Ap
 
 Interação com os seguintes elementos:
 
-TextField
-Radio
-CheckBox
-ComboBox
-ComboMultiplaBox
-TextArea
-Calendar
-DatePicker
-Alert
-Button
-Abas
-Accordion
-Click
-DragDrop
-Splash
-Swipe
-Wait
+- TextField
+- Radio
+- CheckBox
+- ComboBox
+- ComboMultiplaBox
+- TextArea
+- Calendar
+- DatePicker
+- Alert
+- Button
+- Abas
+- Accordion
+- Click
+- DragDrop
+- Splash
+- Swipe
+- Wait
 
 Aprendizado para mexer tanto com App nativo quanto com Hibrido.
 
