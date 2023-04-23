@@ -25,6 +25,7 @@ public class BaseTest {
     public void tearDown() {
     	gerarScreenShot();
 //    	DriverFactory.getDriver().resetApp();
+		DriverFactory.killDriver();
     }
     
     public void gerarScreenShot() {

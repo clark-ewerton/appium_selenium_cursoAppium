@@ -16,8 +16,8 @@ public class DriverFactory {
 	
 	public static AndroidDriver<MobileElement> getDriver() {
 		if(driver == null) {
-			createDriver();
-//			createTestObjectDriver();
+			//createDriver();
+			createTestObjectDriver();
 		}
 		return driver;
 	}
@@ -44,14 +44,24 @@ public class DriverFactory {
     private static void createTestObjectDriver() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("testobject_api_key", "91E74CCC23FC432EBF8F5C10F8685A15");
-        desiredCapabilities.setCapability("appiumVersion", "1.7.2");
+        desiredCapabilities.setCapability("appium:deviceName","Android GoogleAPI Emulator");
+        desiredCapabilities.setCapability("appium:deviceOrientation","portrait");
+        desiredCapabilities.setCapability("appium:platformVersion","12.0");
+        desiredCapabilities.setCapability("appium:automationName","UiAutomator2");
+        desiredCapabilities.setCapability("appium:app","storage:filename=CTAppium_2_0.apk");
+        DesiredCapabilities sauceOptions = new DesiredCapabilities();
+    	sauceOptions.setCapability("build", "appium-build-AMIB6");
+    	sauceOptions.setCapability("name", "<your test name>");
+    	desiredCapabilities.setCapability("sauce:options", sauceOptions);
+        //desiredCapabilities.setCapability("appium:deviceName","Android GoogleAPI Emulator");
+        ////desiredCapabilities.setCapability("testobject_api_key", "91E74CCC23FC432EBF8F5C10F8685A15");
+     //   desiredCapabilities.setCapability("appiumVersion", "1.7.2");
 //        desiredCapabilities.setCapability("deviceName", "emulator-5554");
-        desiredCapabilities.setCapability("automationName", "uiautomator2");
+        //desiredCapabilities.setCapability("automationName", "uiautomator2");
 //        desiredCapabilities.setCapability(MobileCapabilityType.APP, "/Users/wcaquino/Documents/dev/java/workspaceCurso/CursoAppium/src/main/resources/CTAppium_1_0.apk");
         
         try {
-			driver = new AndroidDriver<MobileElement>(new URL("https://us1.appium.testobject.com/wd/hub"), desiredCapabilities);
+			driver = new AndroidDriver<MobileElement>(new URL("https://oauth-clark.ewerton-17bfd:62b27c1a-4422-4fd5-a052-7ba68a2a6a0b@ondemand.us-west-1.saucelabs.com:443/wd/hub"), desiredCapabilities);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

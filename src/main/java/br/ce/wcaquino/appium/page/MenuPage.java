@@ -40,6 +40,22 @@ public class MenuPage extends BasePage {
 	}
 
 	public void acessarSwipe() {
+		int aux = 0;
+		List<MobileElement> elements = getDriver().findElements(By.className("android.widget.TextView"));
+		for (MobileElement element : elements) {
+			if (getDriver().findElements(By.xpath("//*[@text='Swipe']")).size() == 0 && aux < 3) {
+				scrollDown();
+				aux++;
+				if (aux == 2) {
+					System.err.println("NAO ACHOU ELEMENTO");
+					break;
+				}
+			} else {
+				elements.stream().filter(item -> item.getAttribute("text").equals("Swipe"))
+						.forEach(item -> item.click());
+				break;
+			}
+		}
 		clicarPorTexto("Swipe");
 	}
 
