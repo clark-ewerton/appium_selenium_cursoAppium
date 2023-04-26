@@ -26,3 +26,7 @@ Learning to work with both native and hybrid apps.
 - Use of Junit4
 - Design pattern: PageObject
 - Maven
+
+# How to run it?
+
+Basically we have some classes on the src\main\java\br\ce\wcaquino\appium\test and those can be run by Junit4. All of them are related to an Android App that is located on Sauce Labs Cloud. Therefore these tests are executed by remote WebDriver. All the data are on the WebDriverManager class.
