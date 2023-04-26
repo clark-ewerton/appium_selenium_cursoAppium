@@ -1,7 +1,7 @@
-# APPIUM | SELENIUM WEBDRIVER | JUnit 4 - Aplicativo didático para aprendizagem da automação com Appium - Android
-Projeto para automação de um aplicativo Android o curso da udemy utilizando Appium com Selenium
+# APPIUM | SELENIUM WEBDRIVER | JUnit 4 - Didactic application for learning automation with Appium - Android
+Project for automation of an Android application for the Udemy course using Appium with Selenium
 
-Interação com os seguintes elementos:
+Interaction with the following elements:
 
 - TextField
 - Radio
@@ -21,8 +21,8 @@ Interação com os seguintes elementos:
 - Swipe
 - Wait
 
-Aprendizado para mexer tanto com App nativo quanto com Hibrido.
+Learning to work with both native and hybrid apps.
 
-- Utilização de Junit4
-- Padrão de projeto: PageObject
+- Use of Junit4
+- Design pattern: PageObject
 - Maven
